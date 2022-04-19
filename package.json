@@ -21,6 +21,7 @@
   "homepage": "https://github.com/lexomut/-Pointing-Poker-Server#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "express-ws": "^5.0.2",

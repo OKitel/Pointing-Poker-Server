@@ -7,10 +7,21 @@ import { playerRouter } from "./player/playerRouter.js";
 import fileUpload from "express-fileupload";
 import cors from "cors";
 import { webSocketFunction } from "./realtime/WebSocketFunction.js";
+import dotenv from "dotenv";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({
+  path: path.join(__dirname, "../.env"),
+});
+
+const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_USER_NAME = process.env.DB_USER_NAME;
+const DB_NAME = process.env.DB_NAME;
+
 const staticPath = path.resolve("static");
 const PORT = process.env.PORT || 5000;
-const DB_URL =
-  "mongodb+srv://poker-planning:MH0yyzzTNd84OPfS@cluster0.e1biq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const DB_URL = `mongodb+srv://${DB_USER_NAME}:${DB_PASSWORD}@cluster0.e1biq.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 const app = express();
 const expressWs = expressWsModule(app);
 export const aWss = expressWs.getWss();
