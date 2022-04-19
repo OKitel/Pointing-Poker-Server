@@ -10,7 +10,7 @@ import { webSocketFunction } from "./realtime/WebSocketFunction.js";
 const staticPath = path.resolve("static");
 const PORT = process.env.PORT || 5000;
 const DB_URL =
-  "mongodb+srv://reactjs:reactjs@cluster0.gncmp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://poker-planning:MH0yyzzTNd84OPfS@cluster0.e1biq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const app = express();
 const expressWs = expressWsModule(app);
 export const aWss = expressWs.getWss();
@@ -29,7 +29,6 @@ app.use(express.static(staticPath));
 app.use("/", (req, res) => {
   res.end("<h1>pointing-poker-server</h1>");
 });
-
 
 async function startApp() {
   try {

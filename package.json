@@ -1,5 +1,5 @@
 {
-  "name": "poimting-poker-server",
+  "name": "pointing-poker-server",
   "version": "1.0.0",
   "description": "server for pointing-poker",
   "main": "src/index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/lexomut/-Pointing-Poker-Server.git"
   },
-  "author": "lexomut",
+  "author": "lexomut, OKitel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lexomut/-Pointing-Poker-Server/issues"
